@@ -113,9 +113,61 @@ console.log(totalCost);
 
 
 
+// Function Expressions
+
+const plantNeedsWater = function(day){
+  if(day === 'Wednesday'){
+    return true;
+  } else {
+    return false;   
+  }
+};
+
+plantNeedsWater('Tuesday');
+
+console.log(plantNeedsWater('Tuesday'));
 
 
 
+
+// Arrow Functions
+
+const rectangleArea = (width, height) => {
+  let area = width * height;
+  return area
+}
+
+const newFunction = () => {
+  // Function body goes here
+}
+
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
+// Concise Arrow Body Functions
+
+const greaterThanFive = (num) => {
+  return num > 5 ? true : false;
+};
+
+const greaterThanFive = num =>  num > 5 ? true : false;
+
+
+const plantNeedsWater = (day) => {
+  return day === 'Wednesday' ? true : false;
+};
+const plantNeedsWater = day =>
+  day === 'Wednesday' ? true : false;
+
+
+// How should I check for the value of 's?'
+// https://discuss.codecademy.com/t/how-should-i-check-the-value-of-s/338186
 
 
 
