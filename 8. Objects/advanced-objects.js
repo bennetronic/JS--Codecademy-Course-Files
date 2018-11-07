@@ -1,4 +1,5 @@
 ADVANCED OBJECTS
+// Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#
 
 // Introduction
 
@@ -232,3 +233,109 @@ console.log(r2d2.mobile);
 
 
 // Propety Value Shorthand
+
+// Destructuring
+const monsterFactory = (name, age) => {
+  return {
+    name: name,
+    age: age
+  }
+};
+
+// ^^^Is the same as vvv
+const monsterFactory = (name, age) => {
+  return {
+    name,
+    age
+  }
+};
+
+
+
+// Destructured Assignments
+
+// eg.
+const vampire = {
+  name: 'Dracula',
+  residence: 'Transylvania',
+  preferences: {
+    day: 'stay inside',
+    night: 'satisfy appetite'
+  }
+};
+
+// eg.
+const residence = vampire.residence;
+console.log(residence); // Prints 'Transylvania'
+
+// Exercise
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log('Beep Boop');
+    },
+    fireLaser() {
+      console.log('Pew Pew');
+    },
+  }
+};
+
+const { functionality } = robot;
+console.log(functionality); // Prints beep() and fireLaser() functions
+
+functionality.beep(); // Prints Beep Boop
+
+
+
+// Built in Object Methods: Object.keys(), Object.entries(), Object.assign()
+
+const robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+// What is missing in the following method call?
+const robotKeys = Object.keys(robot);
+
+console.log(robotKeys);
+
+// Declare robotEntries below this line:
+const robotEntries = Object.entries(robot);
+
+console.log(robotEntries);
+
+// Declare newRobot below this line:
+const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+
+console.log(newRobot);
+
+
+
+// REVIEW
+
+The object that a method belongs to is called the calling object.
+
+The this keyword refers the calling object and can be used to access properties of the calling object.
+
+Methods do not automatically have access to other internal properties of the calling object.
+
+The value of this depends on where the this is being accessed from.
+
+We cannot use arrow functions as methods if we want to access other internal properties.
+
+JavaScript objects do not have built-in privacy, rather there are conventions to follow to notify other developers about the intent of the code.
+
+The usage of an underscore before a property name means that the original developer did not intend for that property to be directly changed.
+
+Setters and getter methods allow for more detailed ways of accessing and assigning properties.
+
+Factory functions allow us to create object instances quickly and repeatedly.
+
+There are different ways to use object destructuring: one way is the property value shorthand and another is destructured assignment.
+
+As with any concept, it is a good skill to learn how to use the documentation with objects!
