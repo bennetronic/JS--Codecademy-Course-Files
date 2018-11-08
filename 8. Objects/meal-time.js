@@ -4,44 +4,58 @@ const menu = {
     mains: [],
     desserts: []
   },
-  get appetizers() {
 
+  get appetizers() {
+    return this.appetizers;
   },
   set appetizers(appetizersIn) {
-
+    this.appetizers = appetizersIn;
   },
    get mains() {
-
+    return this.mains;
   },
   set mains(mainsIn) {
-
+    this.mains = mainsIn
   },
    get desserts() {
-
+    return this.desserts;
   },
   set desserts(dessertsIn) {
+    this.desserts = dessertsIn;
+  },
 
+  get courses() {
+    return {
+      appetizers: this._courses.appetizers,
+      mains: this._courses.mains,
+      desserts: this._courses.desserts
+    };
   },
-  get _courses() {
-    return {appetizers: this._courses.appetizers, mains: this._courses.mains, desserts: this._courses.desserts};
-  },
+
+
+  // ================================================================
+
+
 
   addDishToCourse (courseName, dishName, dishPrice) {
     const dish = {
-      dishName, dishPrice
-    }
-    this._courses[courseName].push(dish);
+      name: dishName,
+      price: dishPrice,
+    };
+
+      this._courses[courseName].push(dish);
+    },
+
+  getRandomDishFromCourse(courseName) {
+    const dishes = this._courses[courseName];
+    const randomIndex = Math.floor(Math.random() * dishes.length);
+    return dishes[randomIndex];
   },
 
-getRandomDishFromCourse(courseName) {
-  const dishes = this._courses[courseName];
-  const randomIndex = Math.floor(Math.random() * dishes.length);
-  	return randomIndex(dishes);
-},
-  generateRandomMeal: function() {
+  generateRandomMeal() {
     const appetizer = this.getRandomDishFromCourse('appetizers');
-     const main = this.getRandomDishFromCourse('mains');
-     const dessert = this.getRandomDishFromCourse('desserts');
+    const main = this.getRandomDishFromCourse('mains');
+    const dessert = this.getRandomDishFromCourse('desserts');
     const totalPrice = appetizer.price + main.price + dessert.price;
 
     return `Your meal is ${appetizer.name}, ${main.name}, ${dessert.name}. The total price is $${totalPrice}.`;
