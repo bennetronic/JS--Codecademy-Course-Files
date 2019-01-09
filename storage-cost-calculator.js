@@ -1,7 +1,7 @@
-
+// STORAGE COST CALCULATOR
 
 class Company {
-  constructor(companyName) {
+  constructor(companyName, location) {
     this._companyName = companyName;
     this._location = location;
   }
@@ -29,7 +29,7 @@ class EightWeeks extends Company {
   }
 
   get year() {
-    const yearlyCost = (this._week * 44) += (this._week * 8);
+    const yearlyCost = (this._week * 44) + (this._week * 8);
     return this.yearlyCost;
   }
 
@@ -39,4 +39,5 @@ class EightWeeks extends Company {
 }
 
 const accessHornsey = new EightWeeks ('17.77', '', '');
-console.log(EightWeeks);
+// console.log(EightWeeks);
+console.log(accessHornsey);
