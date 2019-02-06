@@ -1,0 +1,75 @@
+REQUESTS I - Resources ======================================================
+
+
+
+// XML POST Diagram
+
+https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+POST+diagram.svg
+
+
+
+// XML GET Diagram 
+
+https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+GET+diagram.svg
+
+
+
+// Wiki Query String 
+
+https://en.wikipedia.org/wiki/Query_string
+
+
+
+// Datamuse API 
+
+https://www.datamuse.com/api/
+
+
+
+// HTTP Request Methods 
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+
+
+// Rebrandly API
+
+https://app.rebrandly.com/
+
+
+
+// Concurrency model and Event Loop
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
+
+
+// XML Introduction
+
+https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction
+
+
+
+
+REQUESTS II - Resources ==========================================================
+
+
+
+// Promises
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+
+// Fetch API
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+
+
+// 
+
+http://jamesbennetts.co.uk/AX_tutorial_jb/index.html
+http://jamesbennetts.co.uk/
+
+
